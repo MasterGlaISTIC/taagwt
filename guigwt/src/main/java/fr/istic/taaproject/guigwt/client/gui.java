@@ -1,5 +1,6 @@
 package fr.istic.taaproject.guigwt.client;
 
+
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -42,9 +43,9 @@ public class gui implements EntryPoint {
    * This is the entry point method.
    */
   public void onModuleLoad() {
-    final Button sendButton = new Button( messages.sendButton() );
+    final Button sendButton = new Button( "sendButton" );
     final TextBox nameField = new TextBox();
-    nameField.setText( messages.nameField() );
+    nameField.setText("nameField" );
     final Label errorLabel = new Label();
 
     // We can add style names to widgets

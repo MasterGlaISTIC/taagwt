@@ -5,20 +5,29 @@
 
 <web-app>
 
-  <!-- Servlets -->
-  <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>fr.istic.taaproject.guigwt.server.GreetingServiceImpl</servlet-class>
-  </servlet>
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>greetServlet</servlet-name>
+		<servlet-class>fr.istic.taaproject.guigwt.server.GreetingServiceImpl</servlet-class>
+	</servlet>
+		<servlet>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>greetServlet</servlet-name>
+		<url-pattern>/gui/greet</url-pattern>
+	</servlet-mapping>
 
-  <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/gui/greet</url-pattern>
-  </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/gui/junithost/*</url-pattern>
+	</servlet-mapping>
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>gui.html</welcome-file>
+	</welcome-file-list>
 
-  <!-- Default page to serve -->
-  <welcome-file-list>
-    <welcome-file>gui.html</welcome-file>
-  </welcome-file-list>
+
 
 </web-app>
